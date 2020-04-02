@@ -1,0 +1,42 @@
+{
+    "@context": [
+        "https://doi.org/10.5063/schema/codemeta-2.0",
+        "http://schema.org"
+    ],
+    "@type": "SoftwareSourceCode",
+    "author": [
+        {
+            "@id": "https://orcid.org/0000-0002-2497-4040",
+            "@type": "Person",
+            "affiliation": {
+                "@type": "Organization",
+                "legalName": "University of Bristol"
+            },
+            "familyName": "Massey",
+            "givenName": "Jon"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-9324-2775",
+            "@type": "Person",
+            "affiliation": {
+                "@type": "Organization",
+                "legalName": "University of St Andrews"
+            },
+            "familyName": "McCann",
+            "givenName": "Patrick"
+        },
+        {
+            "@type": "Person",
+            "affiliation": {
+                "@type": "Organization",
+                "legalName": "Figshare"
+            },
+            "familyName": "Oprea",
+            "givenName": "Lucian"
+        }
+    ],
+    "codeRepository": "https://github.com/pgmccann/nbbdd",
+    "license": "http://www.opensource.org/licenses/MIT",
+    "name": "BDD for Jupyter Notebooks"
+    "programmingLanguage": "Python"
+}
