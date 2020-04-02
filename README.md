@@ -45,3 +45,10 @@ Some simple example for step 2 using [behave ](http://behave.github.io/behave.ex
 
 
 Steps 4 and 5 can be identified as the TDD part which already requires some coding skills. 
+
+# Acknowledgements
+
+This [paper](https://www.researchgate.net/publication/338594130_Testing_with_Jupyter_notebooks_NoteBook_VALidation_nbval_plug-in_for_pytest) helped a lot to understand what should be achieved during the hackday:
+
+Fangohr, H. & Fauske, Vidar & Kluyver, Thomas & Albert, Maximilian & Laslett, Oliver & Cortés-Ortuño, David & Beg, Marijan & Ragan-Kelly, Min. (2020). Testing with Jupyter notebooks: NoteBook VALidation (nbval) plug-in for pytest. 
+
