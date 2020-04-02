@@ -17,3 +17,10 @@ early stage prototyping you research. Since TDD can be a little be to much from 
 to start with a BDD (Behavior-driven development) approach by writing test cases in a natural language that 
 non-programmers can read and also serve as a documentation more or less.
 
+# The basic workflow will be:
+1. Create initial notebook
+2. Start writing test cases using natural language combined with Gherkin behaviour markup
+3. [nbbdd](https://github.com/pgmccann/nbbdd) generates feature and skeleton step files, inserts step code, returns failing test results
+4. Populate skeleton tests with real test code
+5. Start write software while keeping in mind running also the tests until all pass
+
