@@ -49,6 +49,7 @@ with open(nb_file_path) as nb_file:
             source = cell["source"]
             gherkin_code = ""
             in_gherkin_block = False
+
             for line in source:
                 if in_gherkin_block and line.startswith("```"):
                     in_gherkin_block = False
@@ -56,4 +57,8 @@ with open(nb_file_path) as nb_file:
                     gherkin_code += line
                 elif line.startswith("```gherkin"):
                     in_gherkin_block = True
-            print(gherkin_code)
+
+            if len(gherkin_code) > 0:
+                feature_file = open(nb_file_path+"-"+str(i)+".feature", "w")
+                feature_file.write(gherkin_code)
+                feature_file.close()
