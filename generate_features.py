@@ -49,6 +49,8 @@ with open(nb_file_path) as nb_file:
                     in_gherkin_block = True
 
             if len(gherkin_code) > 0:
+                # Filename needs to reference Notebook and cell index
+                # This will allow generated test skeletons to be inserted into Notebook at correct locations
                 feature_file = open(nb_file_path+"-"+str(i)+".feature", "w")
                 feature_file.write(gherkin_code)
                 feature_file.close()
