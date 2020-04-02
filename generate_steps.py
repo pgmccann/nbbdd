@@ -23,7 +23,7 @@ if not os.path.exists(feature_dir):
     os.makedirs(feature_dir)
 
 def writeFailingMethod(tag,name):
-    return f"@{tag}('{name}')\ndef step_{name.replace(' ','_')}(context):\n\tfail\n"
+    return f"@{tag}('{name}')\ndef step_{name.replace(' ','_')}(context):\n\tassert False, 'not yet implemented'\n"
 
 with open(feature_file_path,'r') as feat_file:
 
