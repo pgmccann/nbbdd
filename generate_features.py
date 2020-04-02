@@ -29,6 +29,16 @@ if not nb_file_path.endswith('.ipynb'):
 if not os.path.isfile(nb_file_path):
     raise ValueError('Specified file does not exist')
 
+def process_line(line, in_gherkin_block):
+    if in_gherkin_block and line.startswith("```"):
+        return (None, False)
+    elif in_gherkin_block:
+        return (line, True)
+    elif line.startswith("```gherkin"):
+        return (None, True)
+    else:
+        return (None, False)
+
 with open(nb_file_path) as nb_file:
 
     data = json.load(nb_file)
@@ -40,11 +50,10 @@ with open(nb_file_path) as nb_file:
             gherkin_code = ""
             in_gherkin_block = False
             for line in source:
-                if line.startswith("```gherkin"):
-                    in_gherkin_block = True
+                if in_gherkin_block and line.startswith("```"):
+                    in_gherkin_block = False
                 elif in_gherkin_block:
-                    if line.startswith("```"):
-                        in_gherkin_block = False
-                    else:
-                        gherkin_code += line
+                    gherkin_code += line
+                elif line.startswith("```gherkin"):
+                    in_gherkin_block = True
             print(gherkin_code)
